@@ -32,7 +32,7 @@ A basic calculator that allows users to perform simple arithmetic operations suc
 
 ### 3. Personal Portfolio Website
 
-A personal portfolio website designed to showcase skills, projects, and contact information. It includes multiple sections such as Home, About, Projects, and Contact.
+A personal portfolio website designed to showcase skills, projects, and contact information. It includes multiple sections such as Home, About, skills, and Contact.
 
 **Features:**
 - Responsive layout
