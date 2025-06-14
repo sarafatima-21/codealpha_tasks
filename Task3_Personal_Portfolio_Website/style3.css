@@ -1,0 +1,766 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: whitesmoke;
+    background-color: whitesmoke;
+    background: url(https://media.istockphoto.com/id/1816445281/vector/pink-blue-turquoise-wide-pattern-unique-blurred-rainbow-grainy-background-multicolored.jpg?s=612x612&w=0&k=20&c=O4Uvj_esa2Xl05fsGamT4YtykZu3SklXsMENJxmKRjg=) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #0d0430e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.nav a {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 37px;
+    transition: 0.3s;
+    opacity: 1;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.nav a:hover {
+    color: rgb(99, 255, 47);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background: url(https://media.istockphoto.com/id/1816445281/vector/pink-blue-turquoise-wide-pattern-unique-blurred-rainbow-grainy-background-multicolored.jpg?s=612x612&w=0&k=20&c=O4Uvj_esa2Xl05fsGamT4YtykZu3SklXsMENJxmKRjg=) ;
+    background-size: cover;
+    background-position: center; */
+    padding-left: 40px;
+    color: white;
+}
+
+.home-content {
+    max-width: 700px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-content h3 {
+    font-size: 30px;
+    font-weight: 700px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: rgb(99, 255, 47);
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700px;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    padding: 10px 0;
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s
+}
+
+.home-apps a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(99, 255, 47);
+    border-radius: 50%;
+    color: rgb(99, 255, 47);
+    font-size: 20px;
+    text-decoration: none;
+    margin: 15px 5px;
+    opacity: 0;
+    transition: .5s ease;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.home-apps a:hover {
+    background: rgb(99, 255, 47);
+    color: black;
+    box-shadow: 0 0 15px rgb(99, 255, 47);
+}
+
+.btn-box {
+    margin: 12px 0;
+    display: inline-block;
+    width: auto;
+    border-radius: 40px;
+    padding: 10px 17px;
+    width: 162px;
+    background: rgb(99, 255, 47);
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px rgb(99, 255, 47), 0 0 25px rgb(99, 255, 47), 0 0 50px rgb(99, 255, 47), 0 0 100px rgb(99, 255, 47);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.aboutimg img {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 50px;
+    max-width: 470px;
+    height: auto;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about-content {
+    position: relative;
+    right: 50px;
+}
+
+.about-content h2 {
+    font-size: 60px;
+}
+
+.about-content h2 span {
+    color: chartreuse;
+}
+
+.about-content h4 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 60px;
+    margin: 2rem;
+}
+
+.subtitle span {
+    color: chartreuse;
+}
+
+.container1 {
+    color: whitesmoke;
+    padding: 75px 90px;
+    width: 600px;
+    height: 500px;
+    margin-left: 120px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.heading1 {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.radial-bars {
+    color: whitesmoke;
+}
+
+.bar {
+    font-size: 23px;
+    margin-bottom: 2rem;
+}
+
+.tech-bars .bar {
+    margin-top: 40px 0;
+}
+
+.tech-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.tech-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.tech-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.tech-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText .5s 1s linear forwards;
+    opacity: 0;
+}
+
+.tech-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(245, 245, 245, 0.201);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.tech-bars .bar .progress-line span {
+    height: 100%;
+    background-color: lime;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 95%;
+}
+
+.progress-line.css span {
+    width: 60%;
+}
+
+.progress-line.js span {
+    width: 80%;
+}
+
+.progress-line.py span {
+    width: 70%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after {
+    content: "95%";
+}
+
+.progress-line.css span::after {
+    content: "65%";
+}
+
+.progress-line.js span::after {
+    content: "80%";
+}
+
+.progress-line.py span::after {
+    content: "70%";
+}
+
+.progress-line.html span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stop-color: black;
+    fill: rgba(43, 23, 23, 0.945);
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: lime;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.main-text {
+    padding-top: 60px;
+    margin-top: 20px;
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+.main-text h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+.main-text h2 span {
+    color: rgb(99, 255, 47);
+}
+
+/* .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+} */
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img {
+    margin: 25px;
+    border-radius: 8px;
+    display: inline;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(134, 192, 114));
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.layer i {
+    color: black;
+    margin-top: 20px;
+    font-size: 20px;
+    background: black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2 {
+    font-size: 75px;
+    line-height: 1;
+    text-align: center;
+}
+
+.contact-text h2 span {
+    color: rgb(99, 255, 47);
+}
+
+.contact-text h4 {
+    margin: 15px 0;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    color: rgba(177, 177, 177);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    margin-bottom: 3rem;
+}
+
+.contact-list li {
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.contact-list i {
+    display: inline-block;
+    color: rgb(99, 255, 47);
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.contact-list li a:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: lime;
+}
+
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(99, 255, 47);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(99, 255, 47);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.contact-icons i:hover {
+    background: rgb(99, 255, 47);
+    color: black;
+    box-shadow: 0 0 20px rgb(99, 255, 47);
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input,
+form textarea {
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: rgba(245, 245, 245, 0.201);
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: rgb(99, 255, 47);
+    border-radius: 40px;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px rgb(99, 255, 47), 0 0 25px rgb(99, 255, 47);
+}
+
+.contact-form .send:hover {
+    box-shadow: 0 0 5px rgb(99, 255, 47), 0 0 25px rgb(99, 255, 47), 0 0 50px rgb(99, 255, 47), 0 0 100px rgb(99, 255, 47);
+}
+
+.last-text p {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(46, 91, 7);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i {
+    color: black;
+    background: rgb(99, 255, 47);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
